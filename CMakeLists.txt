@@ -78,12 +78,15 @@ SET( LIBRARIES ${LIBRARIES} ${PHOENIX_LIBRARY} )
 ############################################
 # Find GLFW
 ############################################
+
 set( SEARCH_PATHS 
 	${GLFW_PATH}
 	${GLFW_PATH}/include
 	${GLFW_PATH}/lib
-	${GLFW_PATH}/support/msvc80/Debug
-	${GLFW_PATH}/support/msvc80/Release
+	${GLFW_PATH}/lib/win32/Release # 2.7-lite
+	${GLFW_PATH}/lib/win32/Debug
+	${GLFW_PATH}/support/msvc80/Release # 2.6 Window Support
+	${GLFW_PATH}/support/msvc80/Debug 
 	)
 	
 FIND_PATH( GLFW_INCLUDE_DIR GL/glfw.h PATHS ${SEARCH_PATHS} )
@@ -104,6 +107,16 @@ ENDIF( GLFW_FOUND )
 
 SET( INCLUDES ${INCLUDES} ${GLFW_INCLUDE_DIR} )
 SET( LIBRARIES ${LIBRARIES} ${GLFW_LIBRARY} )
+
+## GLFW Window Move Hack.
+
+if( _GLFW_WM_MOVE_HACK )
+    set_property( DIRECTORY
+	PROPERTY COMPILE_DEFINITIONS _GLFW_WM_MOVE_HACK
+    )
+endif()
+
+##
 
 ############################################
 # Box2d
