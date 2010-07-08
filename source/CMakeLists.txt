@@ -1,6 +1,6 @@
 ############################################
 #
-#  Asteroids CMake
+#  Bea CMake
 #
 ############################################
 cmake_minimum_required( VERSION 2.8 )
@@ -12,6 +12,7 @@ project( Bea )
 ############################################
 
 set( BEA_LIB_SOURCES
+    Bea.h
     AppState.h
     AppStateManager.h
     Event.h
@@ -26,6 +27,7 @@ set( BEA_LIB_SOURCES
     StringHash.h
     View.h
     EventManager.cpp
+    AppStateManager.cpp
 )
 
 ############################################
