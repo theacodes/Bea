@@ -1,5 +1,5 @@
-#ifndef __PONG_VIEW_H__
-#define __PONG_VIEW_H__
+#ifndef __BEA_VIEW_H__
+#define __BEA_VIEW_H__
 
 #include "ObjectViewCommon.h"
 #include "Object.h"
@@ -69,4 +69,4 @@ typedef boost::intrusive_ptr<View> ViewPtr;
 
 } // namespace bea
 
-#endif //__PONG_VIEW_H__
+#endif //__BEA_VIEW_H__

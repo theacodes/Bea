@@ -3,7 +3,6 @@
 
 #include "phoenix.h"
 #include "EventListener.h"
-#include "globals.h"
 
 namespace bea {
 
