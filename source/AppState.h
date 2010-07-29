@@ -30,29 +30,8 @@ public:
 		It's suggested that derived classes call this function.
 	*/
 	virtual void drop(){
-		phoenix::Resource::drop();
 		listener.ignoreAll();
-		if( getStateManager().getCurrent() == this ){
-			getStateManager().change( boost::intrusive_ptr<AppState>() );
-		}
-	}
-
-	/*
-		Changes the active state the the given state, and then
-		drops this state. This effectively hands off execution to
-		a completely new state.
-	*/
-	virtual void change( boost::intrusive_ptr<AppState> _s ){
-		getStateManager().change(_s);
-		drop();
-	}
-
-	/*
-		This activates this state as the currently active state
-		in the state manager.
-	*/
-	virtual void activate(){
-		getStateManager().change( this );
+		phoenix::Resource::drop();
 	}
 
 	/*

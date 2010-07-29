@@ -45,6 +45,13 @@ public:
 	}
 
 	/*
+		Manages a connection
+	*/
+	inline void manage( const std::string& _n, boost::signals2::connection _c ){
+		connections[_n] = _c;
+	}
+
+	/*
 		Disconnects a particular event 'type' (name).
 	*/
 	inline void ignore( const std::string& _n ){

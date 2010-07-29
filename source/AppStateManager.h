@@ -18,18 +18,13 @@ public:
 	}
 
 	virtual ~AppStateManager()
-	{}
-
-	virtual void change( boost::intrusive_ptr<AppState> _s );
-
-	virtual boost::intrusive_ptr<AppState> getCurrent(){
-		return current;
+	{
+		clear();
 	}
 
 	virtual void run();
 
 private:
-	boost::intrusive_ptr<AppState> current;
 };
 
 } // namespace bea

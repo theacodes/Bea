@@ -55,6 +55,13 @@ public:
 	}
 
 	/*!
+		Manages an event connection, useful for collision callback tracking
+	*/
+	void manage(  const std::string& _n, boost::signals2::connection _c  ){
+		listener.manage( _n, _c );
+	}
+
+	/*!
 		Signals an event through the global event manager.
 	*/
 	void signal( const bea::Event& e ){
