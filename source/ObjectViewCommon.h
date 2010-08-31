@@ -14,7 +14,8 @@ namespace bea {
 		signal( event )				- Signals the global event manager.
 		onEvent( event )			- Event callback. (pure virtual)
 		update( time )				- Update process. (puer virtual)
-		proected object timer		- Keeps track of time between update() calls.
+		protected object timer		- Keeps track of time between update() calls.
+		persistent					- Application specific persistent flag. ( ie for preserving objects between rooms )
 
 */
 class ObjectViewCommon
@@ -27,7 +28,7 @@ public:
 		be automatically managed.
 	*/
 	ObjectViewCommon( phoenix::ResourceManager& _rm, const int _t = 99 )
-		: Resource(_rm, _t), listener(), timer()
+		: Resource(_rm, _t), listener(), timer(), persistent( false )
 	{
 	}
 
@@ -83,8 +84,17 @@ public:
 	*/
 	virtual void update( const double dtime = 0.0 ) = 0;
 
+	/*!
+		Setting the protected attribute has no bea-related effect
+		on the object/view, but may be used by the application
+		to preserve objects/views between rooms.
+	*/
+	bool isPersistent() { return persistent; }
+	void setPersistent( const bool p ){ persistent = p; }
+
 protected:
 	phoenix::Timer timer;
+	bool persistent;
 
 private:
 	EventListener listener;
