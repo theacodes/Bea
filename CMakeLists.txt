@@ -52,8 +52,9 @@ SET( LIBRARIES ${LIBRARIES} ${OPENGL_LIBRARIES} )
 
 set( SEARCH_PATHS
     ${PHOENIX_PATH}/source
-    ${PHOENIX_PATH}/build/lib/Debug
     ${PHOENIX_PATH}/build/lib
+    ${PHOENIX_PATH}/build/lib/Release
+    ${PHOENIX_PATH}/build/lib/Debug
     )
     
 FIND_PATH( PHOENIX_INCLUDE_DIR Phoenix.h PATHS ${SEARCH_PATHS} )
