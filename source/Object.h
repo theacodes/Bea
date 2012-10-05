@@ -16,7 +16,7 @@ public:
 		Optionally, you maybe specify the type number.
 	*/
 	Object( phoenix::ResourceManager& _rm, const int _t = 100 )
-		: bea::ObjectViewCommon(_rm, _t)
+		: bea::ObjectViewCommon(_rm, _t), update_time_limit(1.0/20.0)
 	{
 		listen( "game:update" );
 		listen( "game:pause" );
@@ -36,19 +36,19 @@ public:
 	virtual void onEvent( const bea::Event& e )
 	{
 		if( e.name == "game:update" ){
-			if( ! timer.isPaused() ) {
+			if( !timer.isPaused() ) {
 				double dtime = timer.getTime();
 				timer.reset();
-				update( dtime );
+				update( dtime > update_time_limit ? update_time_limit : dtime );
 			}
 			return;
 		}
 		else if( e.name == "game:pause" ){
-			timer.pause();
+			timer.stop();
 			return;
 		}
 		else if( e.name == "game:resume"){
-			timer.resume();
+			timer.reset();
 			return;
 		}
 	}
@@ -61,6 +61,9 @@ public:
 	*/
 	virtual void update( const double dtime = 0.0 ){}
 
+
+protected:
+	double update_time_limit;
 };
 
 typedef boost::intrusive_ptr<Object> ObjectPtr;

@@ -64,6 +64,11 @@ public:
         return properties[_key];
     }
 
+	//! Checks if a value is defined in the map
+	inline const bool contains(const std::string& keyname) const {
+		return ( properties.find(keyname) != properties.end() );
+	}
+
     //! Dump Values
     const void dump() const
     {

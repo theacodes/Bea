@@ -24,9 +24,10 @@ namespace bea{
 		virtual ~EventSpy()
 		{}
 
-		virtual void onEvent( Event e )
+		virtual void onEvent( const bea::Event& e )
 		{
-			std::cout<<"Event "<<e.name<<" signaled"<<std::endl;
+			std::cout<<"======= Event "<<e.name<<" signaled ======="<<std::endl;
+			e.properties.dump();
 		}
 
 	private:

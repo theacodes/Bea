@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" width="64" height="64" tilewidth="32" tileheight="32">
+ <tileset firstgid="1" name="forest" tilewidth="32" tileheight="32">
+  <image source="tiles.png" width="629" height="679"/>
+  <tile id="288">
+   <properties>
+    <property name="solid" value="true"/>
+   </properties>
+  </tile>
+ </tileset>
+ <tileset firstgid="400" name="cvsdf" tilewidth="16" tileheight="16">
+  <image source="tiles.png" width="629" height="679"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="64" height="64">
+  <data encoding="base64" compression="zlib">
+   eJzt1jkOwjAQheHhKGwdUIWtYmuAErj/WbCLRJYVCyQyeOL8xdeO3hu7mGokUqExNpDBKnZTtq7el3/y2cSZRmYGcv2S9dt39/PmzqaFtR1oZF0n5nlbA521s16dnbH+qb+rlTU1N+f7L0RkGViJblY/9xbM3jv3jN3PzjFwiXaglbWenau7d4i6105iL2vO/qV6uJ7PFq+B9O9CSXdvSV209emW1+jel1teQ59ueQ0Wb3krOxhK/3oHVm55C3sYYncAAAAAAAAAAAAAAAAAAPAfb8UYUgI=
+  </data>
+ </layer>
+ <layer name="Tile Layer 2" width="64" height="64">
+  <data encoding="base64" compression="zlib">
+   eJztz7ERQEAURdG/ZagBLVhKQP+9+AEzUgGCPWfm5e9GAAAAT3Qlos8NubH8/eZbV/eSq7m5sf7p7K6N9q/Zu922N9YPAAAAAAAAAAAAAADwtgPR8wSd
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1" width="64" height="64">
+  <object name="Test Object" type="Test" x="476" y="184" width="160" height="120"/>
+  <object x="248" y="191" width="429" height="45"/>
+  <object name="Test Object" type="Test" x="384" y="256" width="160" height="120"/>
+ </objectgroup>
+</map>
