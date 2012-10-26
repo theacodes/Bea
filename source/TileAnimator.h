@@ -1,7 +1,7 @@
 #ifndef __BEA_TILE_ANIM_H__
 #define __BEA_TILE_ANIM_H__
 
-#include "phoenix.h"
+#include "Phoenix.h"
 #include "Tilemap.h"
 
 namespace bea{

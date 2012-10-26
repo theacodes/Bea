@@ -2,7 +2,7 @@
 #define __B_APP_STATE__
 
 #include <string>
-#include "phoenix.h"
+#include "Phoenix.h"
 
 #include "EventListener.h"
 #include "AppStateManager.h"

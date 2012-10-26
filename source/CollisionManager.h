@@ -1,7 +1,7 @@
 #ifndef __BEA_COLLISIONMANAGER_H__
 #define __BEA_COLLISIONMANAGER_H__
 
-#include "phoenix.h"
+#include "Phoenix.h"
 
 namespace bea{
 

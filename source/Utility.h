@@ -2,7 +2,7 @@
 #define __BEA_UTILITY_
 
 #include "math.h"
-#include "phoenix.h"
+#include "Phoenix.h"
 
 namespace bea{
 

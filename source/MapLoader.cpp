@@ -33,7 +33,7 @@ const bool MapLoader::load( const std::string filename, MapLoader::callback tile
 
 		for (int x = 0; x < layer->GetWidth(); ++x) {
 			for (int y = 0; y < layer->GetHeight(); ++y) {
-				auto tile_id = layer->GetTileGid(x, y);
+				auto tile_id = layer->GetTileId(x, y);
 				if( tile_id == 0 ) continue;
 
 				const Tmx::Tileset *tileset = map.FindTileset(tile_id);

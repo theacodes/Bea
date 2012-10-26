@@ -1,7 +1,7 @@
 #ifndef __BEA_APPLICATION_H__
 #define __BEA_APPLICATION_H__
 
-#include "phoenix.h"
+#include "Phoenix.h"
 #include "EventManager.h"
 #include "EventListener.h"
 #include "Object.h"

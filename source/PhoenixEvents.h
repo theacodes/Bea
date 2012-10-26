@@ -1,7 +1,7 @@
 #ifndef __BEA_PHOENIX_EVENTS_H__
 #define __BEA_PHOENIX_EVENTS_H__
 
-#include "phoenix.h"
+#include "Phoenix.h"
 #include "EventListener.h"
 #include <iostream>
 

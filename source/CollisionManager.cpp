@@ -1,4 +1,5 @@
 #include "CollisionManager.h"
+#include <limits>
 
 using namespace phoenix;
 using namespace bea;
@@ -89,7 +90,7 @@ const CollisionResult CollisionManager::test( const Polygon& a, const Polygon& b
 
 
 	// The minimum distance required to separate the two polygons.
-	float mintranslation = FLT_MAX;
+	float mintranslation = std::numeric_limits<float>::max();
 
 	// Loop through both polygon's vertices and test them.
 	for( unsigned int i = 0; i < a.getVertexCount() + b.getVertexCount(); ++i )

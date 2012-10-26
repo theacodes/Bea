@@ -1,7 +1,7 @@
 #ifndef __B_APP_STATE_MANAGER_H__
 #define __B_APP_STATE_MANAGER_H__
 
-#include "phoenix.h"
+#include "Phoenix.h"
 
 namespace bea{
 

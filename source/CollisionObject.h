@@ -1,7 +1,7 @@
 #ifndef __PONG_COLLISION_OBJ_H__
 #define __PONG_COLLISION_OBJ_H__
 
-#include "phoenix.h"
+#include "Phoenix.h"
 #include "CollisionManager.h"
 
 namespace bea{

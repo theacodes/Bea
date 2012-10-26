@@ -1,7 +1,7 @@
 #ifndef __BEA_SPRITE_ANIM_H__
 #define __BEA_SPRITE_ANIM_H__
 
-#include "phoenix.h"
+#include "Phoenix.h"
 #include "Sprite.h"
 
 namespace bea{

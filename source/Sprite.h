@@ -1,7 +1,7 @@
 #ifndef __BEA_SPRITE_H__
 #define __BEA_SPRITE_H__
 
-#include "phoenix.h"
+#include "Phoenix.h"
 #include "EventListener.h"
 
 namespace bea{

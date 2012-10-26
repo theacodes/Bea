@@ -3,7 +3,7 @@
 
 #include "boost/function.hpp"
 #include "boost/foreach.hpp"
-#include "phoenix.h"
+#include "Phoenix.h"
 #include "Tilemap.h"
 #include "PropertyContainer.h"
 #include "Application.h"

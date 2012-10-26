@@ -11,53 +11,12 @@ project( Bea )
 # Bea Library Source files
 ############################################
 
-set( BEA_LIB_SOURCES
-    Bea.h
-    AppState.h
-    AppStateManager.h
-    Event.h
-    EventListener.h
-    EventManager.h
-    EventSpy.h
-    Object.h
-    ObjectViewCommon.h
-    PhoenixEvents.h
-    PrintAny.h
-    PropertyContainer.h
-    StringHash.h
-    View.h
-    EventManager.cpp
-    AppStateManager.cpp
-)
+FILE (GLOB SOURCES *.cpp *.h tmx-parser/*.cpp tmx-parser/*.h tmx-parser/base64/* tmx-parser/tinyxml/* tmx-parser/zlib/*)
 
-############################################
-# Source files
-############################################
-set( BEA_TEST_SOURCES
-	main.cpp
-)
+set( BEA_LIB_SOURCES ${SOURCES} ${HEADERS})
 
 ############################################
 # Libs
 ############################################
 
 add_library( Bea STATIC ${BEA_LIB_SOURCES} )
-
-############################################
-# Exes
-############################################
-
-# main program
-add_executable( BeaTest ${BEA_TEST_SOURCES} )
-target_link_libraries( BeaTest Bea ${LIBRARIES} )
-
-#####################################
-# Windows stuff
-######################################
-#WINDOWS (MSVC)
-if(WIN32)
-	if(MSVC)
-#	    set_target_properties( Asteroids
-#	        PROPERTIES WIN32_EXECUTABLE true )
-	endif()
-endif()
