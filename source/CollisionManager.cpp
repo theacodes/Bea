@@ -83,7 +83,9 @@ const CollisionResult CollisionManager::test( const Polygon& a, const Polygon& b
 	result.colliding = true;
 
 	// Do a radius test first.
-	if ( (a.getPosition()-a.getPosition()).getMagnitude() > (a.getRadius() + a.getRadius()) ){
+	auto distance = a.getPosition()-b.getPosition();
+	auto combined_radius = a.getRadius() + b.getRadius();
+	if ( distance.getMagnitudeSquared() > combined_radius*combined_radius){
 		result.colliding = false;
 		return result;
 	}

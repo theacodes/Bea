@@ -84,6 +84,7 @@ unsigned int Tilemap::getTile( unsigned int _x, unsigned int _y ){
 }
 
 void Tilemap::update(){
+	geom->unlock(false);
 	geom->clear();
 	for( unsigned int y = 0; y < map_height; ++y ){
 		for( unsigned int x = 0; x < map_width; ++x ){
@@ -104,6 +105,7 @@ void Tilemap::update(){
 	}
 	geom->scale( scale );
 	geom->translate( position );
+	geom->lock(true);
 }
 
 void Tilemap::updateTile( unsigned int _x, unsigned int _y ){

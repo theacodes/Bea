@@ -2,6 +2,7 @@
 #define __BEA_SPRITE_H__
 
 #include "Phoenix.h"
+#include "TrackingInvariant.h"
 #include "EventListener.h"
 
 namespace bea{

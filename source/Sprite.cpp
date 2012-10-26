@@ -100,6 +100,8 @@ void Sprite::update(){
 
 		// calculate those texture coordinates.
 		calculateTextureCoords();
+
+		geom->lock();
 	}
 
 	// Update the texture coordinates
@@ -108,5 +110,7 @@ void Sprite::update(){
 		hflip.reset();
 		vflip.reset();
 		calculateTextureCoords();
+
+		geom->lock();
 	}
 }

@@ -19,7 +19,6 @@ public:
 		sprite->update();
 
 		bea::SpriteAnimatorFrameRangePtr frame_animator( new bea::SpriteAnimatorFrameRange( sprite, 0, 3 ) );
-		frame_animator->setSpeed( 5.0f/30.0f );
 
 
 		// Make the collision object
@@ -29,6 +28,8 @@ public:
 		// Set our position and velocity, randomly, of course.
 		setPosition( phoenix::Vector2d( phoenix::random( 20, 800-20 ), phoenix::random( 20, 600-20 ) ) );
 		velocity = phoenix::Vector2d( phoenix::random( 0, 90 ) - 45.0f, 0.0f );
+
+		frame_animator->setSpeed( (5.0f/30.0f) * (fabs(velocity.getX())/45.0f) );
 
 		// rotate the sprite if we are walking left
 		if( velocity.getX() < 0.0f ) sprite->setHorizontalFlip(true);

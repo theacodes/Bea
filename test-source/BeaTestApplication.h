@@ -20,6 +20,9 @@ public:
 		system.setResizeBehavior( phoenix::RZB_EXPAND );
 		phoenix::WindowManager::Instance()->setWindowSize(phoenix::Vector2d(800,600));
 
+		setDrawUpdateInterval(1.0/60.0);
+		setGameUpdateInterval(1.0/60.0);
+
 		new bea::DebugObject();
 
 		phoenix::TexturePtr fairy = system.loadTexture("fairy.png");
